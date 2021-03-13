@@ -1,5 +1,7 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1
-PATH=$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/:Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
+PATH=usr/local/bin:$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/:Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Load dotfiles:
 for file in ~/.{bash_prompt,aliases,private}; do
@@ -9,4 +11,3 @@ unset file;
 
 #gh command completions
 eval "$(gh completion -s bash)"
-eval "$(/opt/homebrew/bin/brew shellenv)"
