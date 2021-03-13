@@ -6,3 +6,7 @@ for file in ~/.{bash_prompt,aliases,private}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
+
+#gh command completions
+eval "$(gh completion -s bash)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
